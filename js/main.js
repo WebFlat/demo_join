@@ -13613,4 +13613,33 @@ $(document).ready(function(){
 		autoplay: true,
 		fade: true
 	});
+
+
+
+
+
 });
+
+
+//Show-hide submunu registration*****************************
+$('#registration').click(function() {
+	
+	$('#submenu').toggleClass('showMenu');
+	$('#registration').toggleClass('hover');
+});
+$(document).on('click', function(e) {
+	if (!$(e.target).closest("#registration").length) {
+		$('#submenu').removeClass('showMenu');
+		$('#registration').removeClass('hover');
+	}
+	e.stopPropagation();
+});
+
+
+
+
+//Accardion text show*************************************
+$('.questions__item').click(function(event){
+    // $(this).toggleClass('active');
+    $(this).next().slideToggle();
+  });
