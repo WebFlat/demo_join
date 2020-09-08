@@ -13632,6 +13632,15 @@ $('.burger').click(function() {
 });
 
 
+//change background nav when scroll************************
+$(window).scroll(function() {
+	if ($(this).scrollTop() >= 600) { 
+		$('.nav').css('background-color', 'rgba(25,25,25, 1)');
+	} else if ($(this).scrollTop() < 600 && $(this).scrollTop() > 100) {
+		$('.nav').css('background-color', 'rgba(25,25,25, .75)');
+	}
+});
+
 
 //Show-hide submunu registration*****************************
 $('.nav__link--reg').click(function() {
